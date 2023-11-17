@@ -1,0 +1,32 @@
+html {
+  background: #f2f1f4;
+  color: #19171c;
+}
+
+.description {
+  display: none;
+  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.title {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.active:hover,
+title:hover {
+  cursor: pointer;
+}
+
+.active + .description {
+  display: block;
+  border: 1px solid black;
+  max-height: 100px;
+}
+
+.active ~ .description svg {
+  transform: rotate(180deg);
+}
